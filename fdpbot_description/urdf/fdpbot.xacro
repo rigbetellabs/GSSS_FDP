@@ -1,0 +1,219 @@
+<?xml version="1.0" ?>
+<robot name="fdpbot" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find fdpbot_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find fdpbot_description)/urdf/fdpbot.trans" />
+<xacro:include filename="$(find fdpbot_description)/urdf/fdpbot.gazebo" />
+<link name="base_link">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.003320171518483772 5.915036857965317e-17 0.10251718223732435"/>
+    <mass value="2.676650061299748"/>
+    <inertia ixx="0.03656" ixy="0.0" ixz="0.001266" iyy="0.044115" iyz="0.0" izz="0.028021"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <geometry>
+      <mesh filename="package://fdpbot_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="brown_wood"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <geometry>
+      <mesh filename="package://fdpbot_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="motor_right_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-3.310528298512151e-15 0.027405101366909962 0.0225"/>
+    <mass value="0.9745201877913348"/>
+    <inertia ixx="0.000412" ixy="-0.0" ixz="-0.0" iyy="0.000366" iyz="0.0" izz="0.00045"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.0 0.105 -0.025"/>
+    <geometry>
+      <mesh filename="package://fdpbot_description/meshes/motor_right_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="darkgrey"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.0 0.105 -0.025"/>
+    <geometry>
+      <mesh filename="package://fdpbot_description/meshes/motor_right_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="motor_left_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-3.310528298512151e-15 -0.027405101366909948 0.0225"/>
+    <mass value="0.9745201877913348"/>
+    <inertia ixx="0.000412" ixy="0.0" ixz="-0.0" iyy="0.000366" iyz="0.0" izz="0.00045"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.0 -0.105 -0.025"/>
+    <geometry>
+      <mesh filename="package://fdpbot_description/meshes/motor_left_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="darkgrey"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.0 -0.105 -0.025"/>
+    <geometry>
+      <mesh filename="package://fdpbot_description/meshes/motor_left_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="wheel_right_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="1.2831076122154082e-17 -0.01249999999999997 6.938893903907228e-18"/>
+    <mass value="0.16480107837339078"/>
+    <inertia ixx="0.000102" ixy="-0.0" ixz="0.0" iyy="0.000186" iyz="0.0" izz="0.000102"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.0 0.11 -0.0475"/>
+    <geometry>
+      <mesh filename="package://fdpbot_description/meshes/wheel_right_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="black"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.0 0.11 -0.0475"/>
+    <geometry>
+      <mesh filename="package://fdpbot_description/meshes/wheel_right_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="wheel_left_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="1.2831076122154082e-17 0.012499999999999997 6.938893903907228e-18"/>
+    <mass value="0.16480107837339078"/>
+    <inertia ixx="0.000102" ixy="0.0" ixz="0.0" iyy="0.000186" iyz="0.0" izz="0.000102"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.0 -0.11 -0.0475"/>
+    <geometry>
+      <mesh filename="package://fdpbot_description/meshes/wheel_left_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="black"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.0 -0.11 -0.0475"/>
+    <geometry>
+      <mesh filename="package://fdpbot_description/meshes/wheel_left_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="castor_front_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-6.274009090034838e-13 8.481479150569596e-19 -0.004250000000000028"/>
+    <mass value="0.005137812985558176"/>
+    <inertia ixx="0.0" ixy="-0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.12 -0.0 -0.01"/>
+    <geometry>
+      <mesh filename="package://fdpbot_description/meshes/castor_front_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="black"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.12 -0.0 -0.01"/>
+    <geometry>
+      <mesh filename="package://fdpbot_description/meshes/castor_front_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="castor_back_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-6.273731534278681e-13 8.481479150569596e-19 -0.004250000000000028"/>
+    <mass value="0.005137812985558176"/>
+    <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.12 -0.0 -0.01"/>
+    <geometry>
+      <mesh filename="package://fdpbot_description/meshes/castor_back_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="black"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.12 -0.0 -0.01"/>
+    <geometry>
+      <mesh filename="package://fdpbot_description/meshes/castor_back_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="lidar_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.0 0.0 0.006997303818004175"/>
+    <mass value="0.303540165913117"/>
+    <inertia ixx="6.9e-05" ixy="0.0" ixz="-0.0" iyy="6.9e-05" iyz="-0.0" izz="0.000127"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.0 -0.0 -0.15"/>
+    <geometry>
+      <mesh filename="package://fdpbot_description/meshes/lidar_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="red"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.0 -0.0 -0.15"/>
+    <geometry>
+      <mesh filename="package://fdpbot_description/meshes/lidar_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="motor_right_base_joint" type="fixed">
+  <origin rpy="0 0 0" xyz="0.0 -0.105 0.025"/>
+  <parent link="base_link"/>
+  <child link="motor_right_1"/>
+</joint>
+
+<joint name="motor_left_base_joint" type="fixed">
+  <origin rpy="0 0 0" xyz="0.0 0.105 0.025"/>
+  <parent link="base_link"/>
+  <child link="motor_left_1"/>
+</joint>
+
+<joint name="right_rev" type="continuous">
+  <origin rpy="0 0 0" xyz="0.0 -0.005 0.0225"/>
+  <parent link="motor_right_1"/>
+  <child link="wheel_right_1"/>
+  <axis xyz="0.0 1.0 0.0"/>
+</joint>
+
+<joint name="left_rev" type="continuous">
+  <origin rpy="0 0 0" xyz="0.0 0.005 0.0225"/>
+  <parent link="motor_left_1"/>
+  <child link="wheel_left_1"/>
+  <axis xyz="0.0 1.0 0.0"/>
+</joint>
+
+<joint name="caster_front_joint" type="fixed">
+  <origin rpy="0 0 0" xyz="0.12 0.0 0.01"/>
+  <parent link="base_link"/>
+  <child link="castor_front_1"/>
+</joint>
+
+<joint name="caster_back_joint" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.12 0.0 0.01"/>
+  <parent link="base_link"/>
+  <child link="castor_back_1"/>
+</joint>
+
+<joint name="lidar_joint" type="fixed">
+  <origin rpy="0 0 0" xyz="0.0 0.0 0.15"/>
+  <parent link="base_link"/>
+  <child link="lidar_1"/>
+</joint>
+
+</robot>

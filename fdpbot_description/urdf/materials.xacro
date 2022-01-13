@@ -1,0 +1,20 @@
+<?xml version="1.0" ?>
+<robot name="fdpbot" xmlns:xacro="http://www.ros.org/wiki/xacro" >
+
+<material name="brown_wood">
+  <color rgba="0.839 0.572 0.168 1.000"/>
+</material>
+
+<material name="black">
+  <color rgba="0.000 0.000 0.000 1.000"/>
+</material>
+
+<material name="darkgrey">
+  <color rgba="0.392 0.392 0.392 1.000"/>
+</material>
+
+<material name="red">
+  <color rgba="1.000 0.000 0.000 1.000"/>
+</material>
+
+</robot>
