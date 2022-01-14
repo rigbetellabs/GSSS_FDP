@@ -17,11 +17,16 @@ for mapping start the folllowing script in a new terminal
 roslaunch fdpbot_slam slam.launch
 ```
 
+move the robot around using this ROS Node
+```
+rosrun teleop_twist_keyboard teleop_twist_keyboard.py
+```
+
 to save the map,
 ```
 rosrun map_server map_saver -f name_of_map
 ```
-this will be stored in home, copy paste yaml and pgm file in navigation package inside maps folder
+this will be stored in home, copy paste yaml and pgm file in slam package inside maps folder
 
 to run navigation
 ```
