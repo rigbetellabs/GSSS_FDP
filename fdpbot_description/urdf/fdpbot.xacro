@@ -3,7 +3,10 @@
 
 <xacro:include filename="$(find fdpbot_description)/urdf/materials.xacro" />
 <xacro:include filename="$(find fdpbot_description)/urdf/fdpbot.trans" />
-<xacro:include filename="$(find fdpbot_description)/urdf/fdpbot.gazebo" />
+<xacro:include filename="$(find fdpbot_description)/gazebo/fdpbot_materials.gazebo" />
+<xacro:include filename="$(find fdpbot_description)/gazebo/fdpbot_physics.gazebo" />
+<xacro:include filename="$(find fdpbot_description)/gazebo/fdpbot_plugins.gazebo" />
+
 <link name="base_link">
   <inertial>
     <origin rpy="0 0 0" xyz="-0.003320171518483772 5.915036857965317e-17 0.10251718223732435"/>

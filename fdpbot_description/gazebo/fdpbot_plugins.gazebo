@@ -1,74 +1,12 @@
 <?xml version="1.0" ?>
 <robot name="fdpbot" xmlns:xacro="http://www.ros.org/wiki/xacro" >
 
-<xacro:property name="body_color" value="Gazebo/Wood" />
-<xacro:property name="wheel_color" value="Gazebo/Black" />
-<xacro:property name="motor_color" value="Gazebo/DarkGrey" />
-<xacro:property name="lidar_color" value="Gazebo/Red" />
-
 <gazebo>
   <plugin filename="libgazebo_ros_control.so" name="control"/>
-</gazebo>
-<gazebo reference="base_link">
-  <material>${body_color}</material>
-  <mu1>0.2</mu1>
-  <mu2>0.2</mu2>
-  <selfCollide>true</selfCollide>
-  <gravity>true</gravity>
-</gazebo>
-
-<gazebo reference="motor_right_1">
-  <material>${motor_color}</material>
-  <mu1>0.2</mu1>
-  <mu2>0.2</mu2>
-  <selfCollide>true</selfCollide>
-</gazebo>
-
-<gazebo reference="motor_left_1">
-  <material>${motor_color}</material>
-  <mu1>0.2</mu1>
-  <mu2>0.2</mu2>
-  <selfCollide>true</selfCollide>
-</gazebo>
-
-<gazebo reference="wheel_right_1">
-  <material>${wheel_color}</material>
-  <mu1>1000</mu1>
-  <mu2>1000</mu2>
-  <selfCollide>true</selfCollide>
-</gazebo>
-
-<gazebo reference="wheel_left_1">
-  <material>${wheel_color}</material>
-  <mu1>1000</mu1>
-  <mu2>1000</mu2>
-  <selfCollide>true</selfCollide>
-</gazebo>
-
-<gazebo reference="castor_front_1">
-  <material>${wheel_color}</material>
-  <mu1>0.01</mu1>
-  <mu2>0.01</mu2>
-  <selfCollide>true</selfCollide>
-</gazebo>
-
-<gazebo reference="castor_back_1">
-  <material>${wheel_color}</material>
-  <mu1>0.01</mu1>
-  <mu2>0.01</mu2>
-  <selfCollide>true</selfCollide>
-</gazebo>
-
-<gazebo reference="lidar_1">
-  <material>${lidar_color}</material>
-  <mu1>0.2</mu1>
-  <mu2>0.2</mu2>
-  <selfCollide>true</selfCollide>
 </gazebo>
 
 <gazebo>
   <plugin name="differential_drive_controller" filename="libgazebo_ros_diff_drive.so">
-
     <updateRate>10</updateRate>
     <leftJoint>left_rev</leftJoint>
     <rightJoint>right_rev</rightJoint>
