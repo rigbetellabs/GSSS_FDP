@@ -30,5 +30,5 @@ this will be stored in home, copy paste yaml and pgm file in slam package inside
 
 to run navigation
 ```
-roslaunch fdpbot_navigation navigation.launch map:=name_of_map
+roslaunch fdpbot_navigation navigation.launch map_file:=name_of_map
 ```
