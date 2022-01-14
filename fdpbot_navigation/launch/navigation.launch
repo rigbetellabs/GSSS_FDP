@@ -1,9 +1,9 @@
 <launch>
 
-<arg name="map_file" default="$(find fdpbot_slam)/maps/fdp_home_map.yaml"/>
+<arg name="map_file" default="fdp_home_map"/>
 <arg name="move_forward_only" default="true"/>
 
-<node pkg="map_server" name="map_server" type="map_server" args="$(arg map_file)"/>
+<node pkg="map_server" name="map_server" type="map_server" args="$(find fdpbot_slam)/maps/$(arg map_file).yaml"/>
 
 <include file="$(find fdpbot_navigation)/launch/amcl.launch"/>
 
